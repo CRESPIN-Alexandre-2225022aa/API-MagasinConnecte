@@ -1,25 +1,27 @@
-# API-MagasinConnecte
+# API-MagasinConnecté
 
-Ce repository contient le code stockés sur un serveur AlwaysData de notre API de back-end de notre site web du Magasin Connecte disponible à cette addresse : https://mael-leperlier-etu.pedaweb.univ-amu.fr
+Ce dépôt contient le code de l’API back-end du site web **Magasin Connecté**, hébergée sur un serveur AlwaysData.  
+Le site est accessible à l’adresse suivante : https://mael-leperlier-etu.pedaweb.univ-amu.fr.
 
-GitHub du projet : https://github.com/BELABBAS-Rayane-2225010aa/SAE5.01
+GitHub du projet principal : https://github.com/BELABBAS-Rayane-2225010aa/SAE5.01.  
 
-Cette API utilise PHP 8.2.
+Cette API est développée en **PHP 8.2**.  
 
-On utilise une clé SSH pour se connecter au serveur. Veiller nous demander directement cette clé pour y avoir accés.
+Pour se connecter au serveur, nous utilisons une clé SSH. Si vous avez besoin d’y accéder, veuillez nous demander directement cette clé.  
 
-Le but finale de cette API est de servir de back-end pour le site.
+L’objectif final de cette API est de servir de back-end au site web.  
 
-A ce jour nous avons fini :
-* la gestion des events avec get, post, put et delete
-* la gestion des users avec get
-* la gestion des shops avec get
+## Fonctionnalités actuellement terminées :  
+- Gestion des **événements** : opérations GET, POST, PUT et DELETE.  
+- Gestion des **utilisateurs** : opération GET.  
+- Gestion des **boutiques** : opération GET.  
 
-Nous devons revoir par la suite :
-* la gestion du login des users avec des tokens de connexion comme dans la version original du site
-* la gestion de la création/modification/suppression des users
-* la gestion des shops et de l'horaire d'ouverture
-* des test unitaire des fonctionnalités
-* une base de données ?
+## Fonctionnalités à revoir ou à implémenter :  
+- Gestion du **login des utilisateurs** avec des tokens d’authentification, comme dans la version originale du site.  
+- Gestion de la **création, modification et suppression des utilisateurs**.  
+- Gestion des **boutiques**, notamment les horaires d’ouverture.  
+- Mise en place de **tests unitaires** pour les différentes fonctionnalités.  
+- Intégration d’une **base de données** (à confirmer).  
 
-Cette Api n'utilise pas de base de données car nous ne sommes encore pas certain de son serveur finale. Son hébergement actuel est temporaire.
+## Limitations actuelles :  
+Cette API n’utilise pas de base de données pour le moment, car nous ne sommes pas encore certains du serveur final qui sera utilisé. L’hébergement actuel est temporaire.  
