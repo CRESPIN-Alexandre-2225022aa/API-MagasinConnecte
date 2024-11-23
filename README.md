@@ -19,5 +19,7 @@ Nous devons revoir par la suite :
 * la gestion du login des users avec des tokens de connexion comme dans la version original du site
 * la gestion de la création/modification/suppression des users
 * la gestion des shops et de l'horaire d'ouverture
+* des test unitaire des fonctionnalités
+* une base de données ?
 
 Cette Api n'utilise pas de base de données car nous ne sommes encore pas certain de son serveur finale. Son hébergement actuel est temporaire.
