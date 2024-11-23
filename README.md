@@ -1,4 +1,4 @@
-# API6MagasinConnecte
+# API-MagasinConnecte
 
 Ce repository contient le code stockés sur un serveur AlwaysData de notre API de back-end de notre site web du Magasin Connecte disponible à cette addresse : https://mael-leperlier-etu.pedaweb.univ-amu.fr
 
