@@ -42,5 +42,16 @@ class EventsRepository {
         }
         $this->connector->write($filteredEvents);
     }
+
+    public function getEventById(mixed $id)
+    {
+        $events = $this->connector->read();
+        foreach ($events as $event) {
+            if ($event['id'] == $id) {
+                return $event;
+            }
+        }
+        return null;
+    }
 }
 ?>
