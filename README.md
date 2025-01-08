@@ -19,8 +19,7 @@ L’objectif final de cette API est de servir de back-end au site web.
 
 ## Fonctionnalités à revoir ou à implémenter :  
 - Gestion du **login des utilisateurs** avec des tokens d’authentification, comme dans la version originale du site.  
-- Gestion de la **création, modification et suppression des utilisateurs**.  
-- Gestion des **boutiques**, notamment les horaires d’ouverture.  
+- Modification du fonctionnement des **boutiques**, notamment les horaires d’ouverture.  
 - Mise en place de **tests unitaires** pour les différentes fonctionnalités.  
 - Intégration d’une **base de données** (à confirmer).  
 
