@@ -12,6 +12,7 @@ Pour se connecter au serveur, nous utilisons une clé SSH. Si vous avez besoin d
 L’objectif final de cette API est de servir de back-end au site web.  
 
 ## Fonctionnalités actuellement terminées :  
+Vous pouvez aller sur le wiki pour connaître les différents endpoints.
 - Gestion de la **connextion** des utilisateur  
 - Gestion des **événements** : opérations GET, POST, PUT et DELETE.  
 - Gestion des **utilisateurs** : opération GET, POST, PUT et DELETE.  
