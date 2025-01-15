@@ -1,6 +1,6 @@
 <?php
 class JsonConnector {
-    private $filePath;
+    private string $filePath;
 
     public function __construct($filePath) {
         $this->filePath = $filePath;

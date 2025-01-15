@@ -1,10 +1,10 @@
 <?php
 
 class User {
-    public $id;
-    public $email;
-    public $password;
-    public $role;
+    public int $id;
+    public string $email;
+    public string $password;
+    public string $role;
 
     public function __construct($id, $email, $password, $role) {
         $this->id = $id;

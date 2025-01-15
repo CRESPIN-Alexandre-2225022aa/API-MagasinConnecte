@@ -1,13 +1,13 @@
 <?php
 
 class Day {
-    public $day;
-    public $withBreak;
-    public $morningStart;
-    public $morningEnd;
-    public $afternoonStart;
-    public $afternoonEnd;
-    public $isOpen;
+    public string $day;
+    public bool $withBreak;
+    public string $morningStart;
+    public string $morningEnd;
+    public string $afternoonStart;
+    public string $afternoonEnd;
+    public bool $isOpen;
 
     public function __construct($day, $withBreak, $morningStart, $morningEnd, $afternoonStart, $afternoonEnd, $isOpen) {
         $this->day = $day;

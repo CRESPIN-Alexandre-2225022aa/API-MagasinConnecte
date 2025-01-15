@@ -2,15 +2,15 @@
 require_once 'Week.php';
 
 class Shop {
-    public $id;
-    public $name;
-    public $description;
-    public $address;
+    public int $id;
+    public string $name;
+    public string $description;
+    public string $address;
     public $images;
-    public $social;
-    public $linkTree;
-    public $currentWeek;
-    public $nextWeek;
+    public string $social;
+    public string $linkTree;
+    public Week $currentWeek;
+    public Week $nextWeek;
 
     public function __construct($id, $name, $description, $address, $images, $social, $linkTree, $currentWeek, $nextWeek) {
         $this->id = $id;
