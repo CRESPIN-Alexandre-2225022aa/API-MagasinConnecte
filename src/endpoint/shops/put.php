@@ -13,17 +13,9 @@ if (!is_array($data)) {
 $repository = new ShopsRepository();
 
 foreach ($data as $shopData) {
-    $id = $shopData['id'] ?? '';
-    $name = $shopData['name'] ?? '';
-    $description = $shopData['description'] ?? '';
-    $address = $shopData['address'] ?? '';
-    $images = $shopData['images'] ?? '';
-    $social = $shopData['social'] ?? '';
-    $linkTree = $shopData['linkTree'] ?? '';
-    $currentWeek = $shopData['currentWeek'] ?? '';
-    $nextWeek = $shopData['nextWeek'] ?? '';
+    $weeks = $shopData['weeks'] ?? [];
 
-    $repository->updateShop($id, $name, $description, $address, $images, $social, $linkTree, $currentWeek, $nextWeek);
+    $repository->updateShop($weeks);
 }
 
 header('Content-Type: application/json');

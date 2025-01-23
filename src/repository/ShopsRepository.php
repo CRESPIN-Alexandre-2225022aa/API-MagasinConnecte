@@ -13,30 +13,37 @@ class ShopsRepository {
         return $this->connector->read();
     }
 
-    public function addShop($name, $description, $address, $images, $social, $linkTree, $currentWeek, $nextWeek): void {
+    public function getShopByNumber($number) {
         $shops = $this->connector->read();
-        $id = count($shops) ? $shops[count($shops) - 1]['id'] + 1 : 1;
-        $shop = new Shop($id, $name, $description, $address, $images, $social, $linkTree, $currentWeek, $nextWeek);
+        foreach ($shops as $shop) {
+            if ($shop['number'] == $number) {
+                return $shop;
+            }
+        }
+        return null;
+    }
+
+    public function addShop($weeks): void {
+        $shops = $this->connector->read();
+        $shop = new Shop($weeks);
         $shops[] = $shop->toArray();
         $this->connector->write($shops);
     }
 
-    public function updateShop($id, $name, $description, $address, $images, $social, $linkTree, $currentWeek, $nextWeek): void {
+    public function updateShop($weeks): void {
         $shops = $this->connector->read();
         foreach ($shops as &$s) {
-            if ($s['id'] == $id) {
-                $shop = new Shop($id, $name, $description, $address, $images, $social, $linkTree, $currentWeek, $nextWeek);
-                $s = $shop->toArray();
-                break;
+            if ($s['number'] == $weeks['number']) {
+                $s = $weeks;
             }
         }
         $this->connector->write($shops);
     }
 
-    public function deleteShop($id): void {
+    public function deleteShop($number): void {
         $shops = $this->connector->read();
-        $shops = array_filter($shops, function($s) use ($id) {
-            return $s['id'] != $id;
+        $shops = array_filter($shops, function($s) use ($number) {
+            return $s['number'] != $number;
         });
         $this->connector->write($shops);
     }
