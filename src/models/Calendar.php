@@ -1,7 +1,7 @@
 <?php
 require_once 'Week.php';
 
-class Shop {
+class Calendar {
     public array $weeks;
 
     public function __construct(array $weeks) {

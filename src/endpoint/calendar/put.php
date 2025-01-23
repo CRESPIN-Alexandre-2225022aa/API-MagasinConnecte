@@ -10,12 +10,20 @@ if (!is_array($data)) {
     exit;
 }
 
-$repository = new ShopsRepository();
+$repository = new CalendarRepository();
 
-foreach ($data as $shopData) {
-    $weeks = $shopData['weeks'] ?? [];
+$year = $data['year'] ?? '';
+$weeks = $data['week'] ?? [];
 
-    $repository->updateShop($weeks);
+if ($year) {
+    if (!$repository->alreadyExistYear($year)) {
+        header('Content-Type: application/json');
+        echo json_encode(['status' => 'error', 'message' => 'Year dont exist']);
+        exit;
+    }
+    foreach ($weeks as $week) {
+        $repository->updateWeek($year, $week);
+    }
 }
 
 header('Content-Type: application/json');
